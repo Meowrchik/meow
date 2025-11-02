@@ -1,0 +1,320 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #F4F4F4;
+    color: #000000;
+    line-height: 1.6;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+h2 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.content {
+    padding: 50px 0;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header {
+    background: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    gap: 180px;
+    padding: 10px 0;
+}
+
+.header-nav img {
+    height: 43px;
+}
+
+.header-menu {
+    display: flex;
+    gap: 30px;
+    user-select: none;
+}
+
+.header-menu a {
+    text-decoration: none;
+    transition: color 0.3s;
+    padding: 8px 16px;
+    border-radius: 6px;
+    -webkit-user-drag: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+    transition: all 0.3s;
+}
+
+.header-menu a:hover,
+.link_active {
+    background-color: #f0efef;
+    color: #ED6E37;
+}
+
+/* ГЛАВНАЯ СТРАНИЦА */
+/* Герой-секция главная */
+.hero-section {
+    margin-left: 30px;
+    margin-right: 60%;
+    top: 30%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+}
+
+h1 {
+    font-size: 45px;
+    margin-bottom: 30px;
+}
+
+.hero-section p {
+    font-size: 25px;
+    color: white;
+}
+
+.background-image {
+    object-fit: cover;
+    width: 100%;
+    z-index: -1;
+}
+
+/* Факты */
+.facts-container {
+    margin: 0 auto;
+    background-color: white;
+    font-size: 20px;
+    width: 70%;
+    padding: 2%;
+    margin-bottom: 20px;
+}
+
+.facts-container li {
+    margin-bottom: 25px;
+}
+
+/* ЧаВо */
+.faq-section {
+    margin-bottom: 50px;
+}
+
+.faq-section h3 {
+    font-size: 24px;
+    color: #ED6E37;
+}
+
+.faq-container {
+    margin: 0 auto;
+    background-color: white;
+    font-size: 20px;
+    width: 55%;
+    padding: 2%;
+    margin-bottom: 20px;
+}
+
+/* КОНЕЦ ГЛАВНОЙ СТРАНИЦЫ */
+
+/* СТРАНИЦА ОТЗЫВОВ */
+
+
+.reviews-container {
+    width: 800px;
+    margin: 30px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    min-height: 350px;
+    position: relative;
+    margin-top: 80px;
+    margin-bottom: 30px;
+}
+
+.review {
+    display: none;
+}
+
+/* Показываем отзыв, когда соответствующий radio выбран */
+#review1:checked ~ .reviews-container .review:nth-child(1),
+#review2:checked ~ .reviews-container .review:nth-child(2),
+#review3:checked ~ .reviews-container .review:nth-child(3) {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.review p {
+    font-size: 16px;
+    text-align: justify;
+}
+
+.review-controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.review-btn {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid black;
+    position: relative;
+}
+
+.review-btn:hover {
+    background-color: #ED6E37;
+    transform: scale(1.05);
+    border: 2px solid white;
+    box-shadow: 0 0 0 2px #ED6E37;
+}
+
+/* Скрываем радиокнопки */
+.review-radio {
+    display: none;
+}
+
+/* Стили для активной кнопки */
+#review1:checked ~ .review-controls label[for="review1"],
+#review2:checked ~ .review-controls label[for="review2"],
+#review3:checked ~ .review-controls label[for="review3"] {
+    background-color: #ED6E37;
+    border: 2px solid white;
+    box-shadow: 0 0 0 2px #ED6E37;
+    transform: scale(1.05);
+}
+h4{
+    color:#ED6E37;
+}
+/* КОНЕЦ СТРАНИЦЫ ОТЗЫВОВ */
+
+/* СТРАНИЦА КОНТАКТОВ */
+.contacts-header {
+    margin-top: 60px;
+}
+
+.contacts-info {
+    width: 800px;
+    margin: 30px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    height: 380px;
+    position: relative;
+    margin-top: 60px;
+    margin-bottom: 63px;
+    text-align: center;
+    line-height: 4;
+}
+
+/* СТРАНИЦА АКЦИЙ */
+.promotions-hero {
+    padding: 20px 0 0;
+}
+
+.promotions-title {
+    margin-left: 30px;
+    margin-right: 60%;
+    top: 40%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    padding: 0 70px;
+    font-size: 40px;
+    text-align: center;
+}
+
+.container-img {
+    display: flex;
+    align-items: center;
+}
+
+/* ПОДВАЛ */
+footer {
+    background-color: #E1A52B;
+    color: black;
+    height: 80px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    animation: epilepsia 0.3s linear infinite;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Расположение элементов подвала */
+.footer-social {
+    display: flex;
+    gap: 15px;
+    margin-left: 300px;
+}
+
+.footer-contacts {
+    text-align: right;
+    line-height: 1.4;
+    margin-right: 300px;
+}
+
+.footer-social img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-contacts {
+    text-align: right;
+    line-height: 1.4;
+}
+
+.footer-social img {
+    width: 20px;
+    height: 20px;
+    transition: opacity 0.3s;
+}
+
+.footer-social img:hover {
+    opacity: 0.7;
+}
